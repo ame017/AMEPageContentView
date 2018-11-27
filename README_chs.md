@@ -1,31 +1,30 @@
 # AMEPageContentView
-A page content view for iOS
+一个分页控制器
 
 
-##### ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) Chinese (Simplified): [中文说明](README_chs.md)
-
-# what is this?
-Just see the display image:
+# 这是啥?
+写了一个分页控制器
+效果如图:
 ![display](Display/1.gif)
 
-# Characteristics
+# 特色
 
-1. lazyLoad
-2. automic child viewcontroller life circle
+1. 懒加载 节约网络资源
+2. 自动调用child viewcontroller 的life circle 如图
 ![display](Display/2.png)
 
-3. xib or code init both OK
+3. 支持纯代码和xib初始化
 
-# How To use?
+# 咋用?
 
-Supported properties:
+有这么多属性:
 
 ```
-//The necessary
+//必须的
 self.contentView.fatherViewController = self;
 self.contentView.itemArray            = self.itemArray;
 
-//optional
+//选用
 self.contentView.canScroll            = YES;
 self.contentView.buttonWidth          = 100;
 self.contentView.underLineLenth       = 100;
@@ -37,16 +36,16 @@ self.contentView.underLineColor       = [UIColor orangeColor];
 self.contentView.delegate             = self;
 ```
 
-### DO NOT FORGET
+### 这里注意一下
 
-add this method to father viewcontroller
+在父viewcontroller加这个方法
 ```
 - (BOOL)shouldAutomaticallyForwardAppearanceMethods{
 return NO;
 }
 ```
 
-# Install
-CocoaPods coming soon.
+# 安装
+CocoaPods 近期将会提供.
 
 
