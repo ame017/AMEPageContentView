@@ -4,7 +4,7 @@
 
 # 这是啥?
 写了一个分页控制器
-效果如图:
+效果如图:<br>
 ![display](Display/1.gif)
 
 # 特色
@@ -41,7 +41,7 @@ self.contentView.delegate             = self;
 在父viewcontroller加这个方法
 ```
 - (BOOL)shouldAutomaticallyForwardAppearanceMethods{
-return NO;
+  return NO;
 }
 ```
 
