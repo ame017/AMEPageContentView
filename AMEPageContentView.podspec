@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.author             = { "ame017" => "https://github.com/ame017" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/ame017/AMEPageContentView.git", :tag => "#{s.version}" }
-  s.source_files  = "AMEPageContentView/*.{h,m}"
+  s.source_files  = "AMEPageContentView/AMEPageContentView/*.{h,m}"
 
 end
