@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0"
   s.summary      = "A page content view for iOS."
   s.homepage     = "https://github.com/ame017/AMEPageContentView"
-  s.screenshots  = "https://github.com/ame017/AMEPageContentView/blob/master/Display/1.gif"
+  s.screenshots  = "https://github.com/ame017/AMEPageContentView/blob/master/Display/1.gif?raw=true"
   s.license      = "MIT"
   s.author             = { "ame017" => "https://github.com/ame017" }
   s.platform     = :ios, "8.0"
