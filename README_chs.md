@@ -46,6 +46,12 @@ self.contentView.delegate             = self;
 ```
 
 # 安装
-CocoaPods 近期将会提供.
+
+```
+pod 'AMEPageContentView', '~> 1.0'
+```
+```
+#import <AMEPageContentView.h>
+```
 
 

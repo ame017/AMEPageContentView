@@ -47,6 +47,11 @@ return NO;
 ```
 
 # Install
-CocoaPods coming soon.
+```
+pod 'AMEPageContentView', '~> 1.0'
+```
+```
+#import <AMEPageContentView.h>
+```
 
 
