@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AMEPageContentBottomView : UIView
 @property (nonatomic, weak) id<AMEPageContentBottomViewDelegate> delegate;
 @property (nonatomic, strong) NSArray<UIViewController *> * viewControllers;
-@property (nonatomic, strong) UIViewController * fatherViewController;
+@property (nonatomic, weak) UIViewController * fatherViewController;
 @property (nonatomic, assign) NSInteger index;
 
 - (instancetype)initWithFrame:(CGRect)frame fatherViewController:(UIViewController *)fatherViewController;

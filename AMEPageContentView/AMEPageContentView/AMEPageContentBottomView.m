@@ -47,8 +47,26 @@
     return self;
 }
 
+- (void)dealloc{
+    for (UIViewController * vc in self.viewControllers) {
+        [vc beginAppearanceTransition:NO animated:YES];
+        [vc endAppearanceTransition];
+    }
+}
+
 - (void)setUp{
     [self addSubview:self.scrollView];
+}
+- (void)layoutSubviews{
+    self.scrollView.frame = CGRectMake(0, 0, SELF_WIDTH, SELF_HEIGHT);
+    if (self.didSetControllerArray.count) {
+        self.scrollView.contentSize = CGSizeMake(self.viewControllers.count*SELF_WIDTH, SELF_HEIGHT);
+        int i = 0;
+        for (UIViewController * vc in self.didSetControllerArray) {
+            vc.view.frame = CGRectMake(i*SELF_WIDTH, 0, SELF_WIDTH, self.scrollView.frame.size.height);
+            i++;
+        }
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{

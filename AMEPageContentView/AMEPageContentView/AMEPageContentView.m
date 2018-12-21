@@ -131,6 +131,14 @@
     _fatherViewController = fatherViewController;
     self.bottomView.fatherViewController = fatherViewController;
 }
+- (void)setUnderLineViewBackgroundColor:(UIColor *)underLineViewBackgroundColor{
+    _underLineViewBackgroundColor = underLineViewBackgroundColor;
+    self.chooseView.backgroundColor = underLineViewBackgroundColor;
+}
+- (void)setBottomViewBackgroundColor:(UIColor *)bottomViewBackgroundColor{
+    _bottomViewBackgroundColor = bottomViewBackgroundColor;
+    self.bottomView.backgroundColor = bottomViewBackgroundColor;
+}
 
 - (void)setIndex:(NSInteger)index{
     _index = index;

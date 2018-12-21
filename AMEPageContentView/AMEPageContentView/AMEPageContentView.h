@@ -55,6 +55,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) CGFloat chooseViewHeight;
 
+/**
+ 上面控件的背景色
+ */
+@property (nonatomic, strong) UIColor * underLineViewBackgroundColor;
+
+/**
+ 下面控件的背景色
+ */
+@property (nonatomic, strong) UIColor * bottomViewBackgroundColor;
+
 
 /*---------------标题栏滚动支持---------------*/
 
@@ -73,7 +83,8 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  用于确认viewController的父子关系,建议赋值,以免出现不必要的错误
  */
-@property (nonatomic, strong) UIViewController * fatherViewController;
+@property (nonatomic, weak) UIViewController * fatherViewController;
+
 /**
  内容数组
  */
