@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "AMEPageContentView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A page content view for iOS."
   s.homepage     = "https://github.com/ame017/AMEPageContentView"
   s.screenshots  = "https://github.com/ame017/AMEPageContentView/blob/master/Display/1.gif?raw=true"
