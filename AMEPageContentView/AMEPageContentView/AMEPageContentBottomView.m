@@ -185,8 +185,16 @@
     if (self.didSetControllerArray.count) {
         self.scrollView.contentSize = CGSizeMake(self.viewControllers.count*SELF_WIDTH, SELF_HEIGHT);
         int i = 0;
-        for (UIViewController * vc in self.didSetControllerArray) {
-            vc.view.frame = CGRectMake(i*SELF_WIDTH, 0, SELF_WIDTH, self.scrollView.frame.size.height);
+        for (UIViewController * vc in self.viewControllers) {
+            BOOL isFind = NO;
+            for (UIViewController * didSetVc in self.didSetControllerArray) {
+                if (didSetVc == vc) {
+                    isFind = YES;
+                }
+            }
+            if (isFind) {
+                vc.view.frame = CGRectMake(i*SELF_WIDTH, 0, SELF_WIDTH, self.scrollView.frame.size.height);
+            }
             i++;
         }
     }
