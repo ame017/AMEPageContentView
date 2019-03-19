@@ -48,7 +48,7 @@ return NO;
 
 # Install
 ```
-pod 'AMEPageContentView', '~> 1.0'
+pod 'AMEPageContentView'
 ```
 ```
 #import <AMEPageContentView.h>
