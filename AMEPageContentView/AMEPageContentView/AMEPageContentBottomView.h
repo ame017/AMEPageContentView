@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithFrame:(CGRect)frame fatherViewController:(UIViewController *)fatherViewController;
 
+- (void)fatherCallViewWillAppear;
+
 @end
 
 NS_ASSUME_NONNULL_END

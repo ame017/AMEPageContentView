@@ -93,6 +93,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithFrame:(CGRect)frame fatherViewController:(UIViewController *)fatherViewController;
 
 
+/**
+ 把这个方法在父vc的viewWillAppear里调用，解决子页面的viewWillAppear的二次调用问题
+ */
+- (void)fatherCallViewWillAppear;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

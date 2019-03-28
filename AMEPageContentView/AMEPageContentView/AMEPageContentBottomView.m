@@ -14,6 +14,8 @@
 @interface AMEPageContentBottomView ()<UIScrollViewDelegate>
 @property (nonatomic, strong) UIScrollView * scrollView;
 @property (nonatomic, strong) NSMutableArray<UIViewController *> * didSetControllerArray;
+
+@property (nonatomic, assign) BOOL didFirstCallViewWillAppear;
 @end
 
 @implementation AMEPageContentBottomView
@@ -76,7 +78,14 @@
         }
     }
 }
-
+- (void)fatherCallViewWillAppear{
+    if (!self.didFirstCallViewWillAppear) {
+        self.didFirstCallViewWillAppear = YES;
+    }else{
+        [self.viewControllers[_index] beginAppearanceTransition:YES animated:YES];
+        [self.viewControllers[_index] endAppearanceTransition];
+    }
+}
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     NSInteger indexNow = self.index;
     _index = scrollView.contentOffset.x / SELF_WIDTH;
@@ -98,6 +107,7 @@
     if (self.viewControllers.count < self.index + 1) {
         return;
     }
+    
     UIViewController * vc = self.viewControllers[self.index];
     BOOL isFind = NO;
     for (UIViewController * tempVC in self.didSetControllerArray) {

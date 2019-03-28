@@ -63,6 +63,10 @@
     self.bottomView.frame = CGRectMake(0, self.chooseViewHeight, SELF_WIDTH, SELF_HEIGHT-self.chooseViewHeight);
 }
 
+- (void)fatherCallViewWillAppear{
+    [self.bottomView fatherCallViewWillAppear];
+}
+
 #pragma mark - delegate
 - (void)ame_underLineChooseView:(AMEUnderLineChooseView *)view didChangeIndex:(NSInteger)index{
     self.bottomView.index = index;
@@ -78,6 +82,7 @@
         [self.delegate ame_pageContentView:self didChangeIndex:index];
     }
 }
+
 #pragma mark - getter & settter
 - (void)setItemArray:(NSMutableArray<AMEPageContentItem *> *)itemArray{
     _itemArray = itemArray;
